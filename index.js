@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 
 const porta  = 3000;
 const host = '0.0.0.0';//todas interfaces do computadot
@@ -6,7 +7,7 @@ const host = '0.0.0.0';//todas interfaces do computadot
 var listaAluno=[];
 const app = express();
 
-app.use(express.static('./publico'));
+app.use(express.static(path.join(process.cwd(), 'publico')));
 //funcionalidades
 app.use('/cadastrarAluno',(req,resp)=>{
     //extraindo os dados do formulario
