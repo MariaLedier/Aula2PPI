@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+
+    <style>
+        form{
+            font-size:15px;
+            text-align: left;
+        }
+        h1{
+            font-size: 30px;
+            margin-left: 150px;
+            text-transform: uppercase;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h2{
+            margin: 5px 5px 5px 5px;
+            text-decoration: underline;
+            margin-bottom: 4px;
+        }
+        label{
+            font-size: 20px;
+            margin: 5px 5px 5px 5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+
+        }
+        body{
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Pré-matrícula</h1>
+    
+    <form name="Cadastro" action="" method="">
+        <h2>Dados Pessoais</h2>
+
+        <label for="nome">Nome Completo:</label> 
+        <input type="text" class="nome" placeholder="Digite seu nome aqui" name="nome" size="50" maxlength="45"/>
+
+        <label for="cpf">CPF:</label> 
+        <input type="tel" name="cpf" placeholder="XXX.XXX.XXX-XX" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}\-\d{2}"/>
+
+        <label for="data">Nascimento:</label>
+        <input type="date" name="data" id="data" />
+
+        <label for="nomemae">Nome da mãe: </label>
+        <input type="text" name="nomemae" placeholder="Digite o nome aqui" name="nomemae" size="50" maxlength="45"/>
+
+        <label for="telefone">Telefone: </label>
+        <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" id="telefone" pattern="(\d{2}\)\d{5}\-\d{4}\"/>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@provedor" />
+
+        <label for="foto"> Foto:</label>
+        <input type="file" text= "Procurar" name="foto" id="foto"/>
+
+        <br>
+        <br>
+        <br>
+
+        <h2>Outros</h2>
+         <label for="escolar">Formação escolar: </label>
+            <select name=“selOpcao” >
+                <option value=“1” selected=“selected”> Ensino Infantil </option>
+                <option value=“2”> Ensino Fundamental </option>
+                <option value=“3”> Ensino Médio</option>
+            </select>
+        <label for="turno">Turno:</label>
+            <br>
+            <input type=checkbox name="Opcao1" value="1"/> Manhã <br/>
+            <input type=checkbox name="Opcao2" value="1"/> Tarde <br/>
+            <input type=checkbox name="Opcao1" value="1"/> Noite <br/>
+            <br>
+    
+        <label for="obs">Observações:</label>
+        <br>
+        <textarea name="obs" placeholder="Digite algo aqui..." id="obs" cols="50" rows="10"></textarea>
+        <br>
+        <br>
+        <br>
+   
+    <div class="col-12 mb-3">
+        <button type="submit">Cadastrar</button>
+        <a href="/">Voltar</a>                   
+    </div>
+
+    </form>
+
+    <br>
+    <br>
+</body>
+</html>
